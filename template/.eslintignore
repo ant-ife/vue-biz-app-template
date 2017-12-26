@@ -1,0 +1,5 @@
+build/*.js
+config/*.js
+.git/
+dist/
+**/*.min.js

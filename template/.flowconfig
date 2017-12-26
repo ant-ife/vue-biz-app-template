@@ -1,0 +1,27 @@
+[ignore]
+.*/node_modules/.*
+<PROJECT_ROOT>/\.tmp/.*
+<PROJECT_ROOT>/dist/.*
+[include]
+src
+[libs]
+flow-typed
+[options]
+unsafe.enable_getters_and_setters=true
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue
+module.file_ext=.vue
+module.file_ext=.js
+module.file_ext=.less
+module.name_mapper='^~assets/\(.*\)$' -> '<PROJECT_ROOT>/src/assets/\1'
+module.name_mapper='^~biz-apps/\(.*\)$' -> '<PROJECT_ROOT>/src/biz-apps/\1'
+module.name_mapper='^~constants/\(.*\)$' -> '<PROJECT_ROOT>/src/constants/\1'
+module.name_mapper='^~components/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^~entry/\(.*\)$' -> '<PROJECT_ROOT>/src/entry/\1'
+module.name_mapper='^~i18n/\(.*\)$' -> '<PROJECT_ROOT>/src/i18n/\1'
+module.name_mapper='^~libs/\(.*\)$' -> '<PROJECT_ROOT>/src/libs/\1'
+module.name_mapper='^~router/\(.*\)$' -> '<PROJECT_ROOT>/src/router/\1'
+module.name_mapper='^~store/\(.*\)$' -> '<PROJECT_ROOT>/src/store/\1'
+module.name_mapper='^~styles/\(.*\)$' -> '<PROJECT_ROOT>/src/styles/\1'
+module.name_mapper='^~utils/\(.*\)$' -> '<PROJECT_ROOT>/src/utils/\1'
+module.name_mapper='^~views/\(.*\)$' -> '<PROJECT_ROOT>/src/views/\1'

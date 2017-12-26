@@ -1,0 +1,23 @@
+declare module 'vue' {
+  declare module.exports: any;
+}
+
+declare module 'vue-router' {
+  declare module.exports: any;
+}
+
+declare module 'fastclick' {
+  declare module.exports: any;
+}
+
+declare module 'vuex' {
+  declare module.exports: any;
+}
+
+declare module 'whatwg-fetch' {
+  declare module.exports: any;
+}
+
+declare module 'es6-promise/auto' {
+  declare module.exports: any;
+}

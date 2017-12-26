@@ -1,0 +1,19 @@
+{
+  "name": "autodebit",
+  "version": "0.0.0.1",
+  "appId": "{{ uuid }}",
+  "author": "",
+  "description": "",
+  "build": {
+    "include": [
+      "./**/*"
+    ],
+    "ignore": [
+      "./**/*.md",
+      "./**/*.map"
+    ]
+  },
+  "biz-apps": [
+    "autodebit"
+  ]
+}

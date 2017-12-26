@@ -1,0 +1,22 @@
+{
+  "presets": [
+    ["es2015", { "modules": false }],{{#if flow}}
+    "flow",{{/if}}
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-object-rest-spread",
+    "transform-regenerator",{{#if flow}}
+    "transform-class-properties",{{/if}}
+  ],{{#if test}}
+  "env": {
+    "test": {
+      "presets": [
+        "es2015",
+      ],
+      "plugins": [
+        "istanbul"
+      ],
+    }
+  },{{/if}}
+}
