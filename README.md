@@ -2,15 +2,12 @@
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
 [![node version][node-image]][node-url]
 
 [npm-image]: http://img.shields.io/npm/v/vue-biz-app-template.svg?style=flat-square
 [npm-url]: http://npmjs.org/package/vue-biz-app-template
 [travis-image]: https://img.shields.io/travis/ant-ife/vue-biz-app-template.svg?style=flat-square
 [travis-url]: https://travis-ci.org/ant-ife/vue-biz-app-template
-[coveralls-image]: https://img.shields.io/coveralls/ant-ife/vue-biz-app-template.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/ant-ife/vue-biz-app-template?branch=master
 [node-image]: https://img.shields.io/badge/node.js-%3E=8-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 
