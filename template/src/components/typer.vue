@@ -51,7 +51,7 @@ export default {
         }
       }
 
-      for (let text of ctx.slogans) {
+      for (const text of ctx.slogans) {
         await playText(
           text,
           n => {
