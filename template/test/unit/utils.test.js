@@ -3,7 +3,6 @@ import assert from 'assert'
 import * as _ from '~utils'
 
 describe('test utils', () => {
-
   it('arrayFind work', () => {
     assert.equal(_.arrayFind([1, 2, 3], x => x > 2), 3)
     assert.equal(_.arrayFind([1, 2, 3], x => x > 3), null)

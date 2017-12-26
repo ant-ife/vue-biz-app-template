@@ -36,8 +36,8 @@ const router = new Router({
 })
 
 router.afterEach(route => {
-  let meta = route.meta || {}
-  let title = gettext(meta.titleKey || 'index.title')
+  const meta = route.meta || {}
+  const title = gettext(meta.titleKey || 'index.title')
   jsbridge.setTitle(title)
 })
 

@@ -39,7 +39,7 @@ export const isFunction = is('Function')
 export const isObject = is('Object')
 
 export const requestAnimationFrame = (cb) => {
-  var raf = window.requestAnimationFrame ||
+  let raf = window.requestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.mozRequestAnimationFrame
   /**

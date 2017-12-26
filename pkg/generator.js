@@ -1,12 +1,12 @@
-var fs = require('fs')
-var path = require('path')
-var pkgSettings = require('../pkg')
+const fs = require('fs')
+const path = require('path')
+const pkgSettings = require('../pkg')
 
 module.exports = function (conf, dest) {
-  var pkg = require(path.join(dest, 'package.json'))
-  var keys = Object.keys(pkgSettings)
-  for (var i = 0; i < keys.length; i++) {
-    var module = keys[i]
+  const pkg = require(path.join(dest, 'package.json'))
+  const keys = Object.keys(pkgSettings)
+  for (let i = 0; i < keys.length; i++) {
+    const module = keys[i]
     if (conf[module] === true) {
       pkg.dependencies = Object.assign(
         pkg.dependencies || {},

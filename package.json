@@ -1,7 +1,7 @@
 {
   "name": "vue-biz-app-template",
   "version": "1.0.0",
-  "homepage": "https://github.com/apfe-cli/vue-biz-app-template",
+  "homepage": "https://github.com/ant-ife/vue-biz-app-template",
   "description": "A biz-app architecture vue tempalte",
   "keywords": [
     "vue",
@@ -13,12 +13,24 @@
     "brucejcw <bruce.jcw@gmail.com>",
     "elrrrrrrr <elrrrrrrr@gmail.com>"
   ],
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/apfe-cli/vue-biz-app-template.git"
+    "url": "https://github.com/ant-ife/vue-biz-app-template.git"
   },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-antife": "^1.0.0",
+    "pre-commit": "^1.2.2"
+  },
+  "scripts": {
+    "lint": "eslint --fix meta.js",
+    "ci": "npm run lint"
+  },
+  "pre-commit": [
+    "lint"
+  ],
   "bugs": {
-    "url": "https://github.com/apfe-cli/vue-biz-app-template/issues"
-  }
+    "url": "https://github.com/ant-ife/vue-biz-app-template/issues"
+  },
+  "license": "MIT"
 }

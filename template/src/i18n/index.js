@@ -9,8 +9,8 @@ const _default = 'en_US'
 const _lang = getLang() || _default
 
 export const langPkgs = {
-  'en_US': r => require.ensure([], () => r(require('./locales/en_US')), 'en_US'),
-  'zh_CN': r => require.ensure([], () => r(require('./locales/zh_CN')), 'zh_CN'),
+  en_US: r => require.ensure([], () => r(require('./locales/en_US')), 'en_US'),
+  zh_CN: r => require.ensure([], () => r(require('./locales/zh_CN')), 'zh_CN'),
 }
 
 export const language = langPkgs.hasOwnProperty(_lang) ? _lang : _default

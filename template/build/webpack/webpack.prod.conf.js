@@ -18,23 +18,23 @@ const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
       sourceMap: false,
-      extract: true
-    })
+      extract: true,
+    }),
   },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
-      'process.env': env
+      'process.env': env,
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
-          warnings: false
-        }
+          warnings: false,
+        },
       },
       sourceMap: config.build.productionSourceMap,
-      parallel: true
+      parallel: true,
     }),
     // extract css into its own file
     new ExtractTextPlugin({
@@ -49,7 +49,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new OptimizeCSSPlugin({
       cssProcessorOptions: config.build.productionSourceMap
         ? { safe: true, map: { inline: false } }
-        : { safe: true }
+        : { safe: true },
     }),
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
@@ -62,7 +62,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         removeComments: true,
         collapseWhitespace: true,
         removeAttributeQuotes: true,
-        minifyJS: true
+        minifyJS: true,
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
@@ -85,23 +85,23 @@ const webpackConfig = merge(baseWebpackConfig, {
             path.join(__dirname, '../node_modules')
           ) === 0
         )
-      }
+      },
     }),
     // extract webpack runtime and module manifest to its own file in order to
     // prevent vendor hash from being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
-      minChunks: Infinity
+      minChunks: Infinity,
     }),
     // copy custom static assets
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../../vendor'),
         to: config.build.assetsSubDirectory,
-        ignore: ['.*']
-      }
-    ])
-  ]
+        ignore: ['.*'],
+      },
+    ]),
+  ],
 })
 
 if (config.build.productionGzip) {
@@ -117,7 +117,7 @@ if (config.build.productionGzip) {
         ')$'
       ),
       threshold: 10240,
-      minRatio: 0.8
+      minRatio: 0.8,
     })
   )
 }

@@ -1,21 +1,34 @@
 # vue-biz-app-template
 
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
+[![node version][node-image]][node-url]
+
+[npm-image]: http://img.shields.io/npm/v/vue-biz-app-template.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/vue-biz-app-template
+[travis-image]: https://img.shields.io/travis/ant-ife/vue-biz-app-template.svg?style=flat-square
+[travis-url]: https://travis-ci.org/ant-ife/vue-biz-app-template
+[coveralls-image]: https://img.shields.io/coveralls/ant-ife/vue-biz-app-template.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/ant-ife/vue-biz-app-template?branch=master
+[node-image]: https://img.shields.io/badge/node.js-%3E=8-green.svg?style=flat-square
+[node-url]: http://nodejs.org/download/
+
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
 > This template is Vue 2.0 compatible
-## Documentation
 
 - [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
 
 ## Usage
 
-This is a project template for [apfe-cli](https://github.com/apfe-cli/apfe-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
+This is a project template for [apfe-cli](https://github.com/ant-ife/apfe-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
 
 ``` bash
 $ npm install -g apfe-cli
 $ apfe init my-project
 $ cd my-project
-$ npm install
+$ npm i
 $ npm run dev
 ```
 
@@ -115,3 +128,7 @@ The ```babel``` is the module name, which will be used in ```apfe update babel``
 The ```files``` means the files that needs to be replaced by updating.(The files desc could use [glob pattern](https://github.com/isaacs/node-glob))
 
 The ```package.json``` means the existing project's package.json needs to be extended by this module.
+
+## License
+
+The MIT License (MIT)

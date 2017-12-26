@@ -23,13 +23,13 @@ const jsbridge = {
   },
 
   call () {
-    var args = [].slice.call(arguments)
+    const args = [].slice.call(arguments)
 
     if (window[JS_BRIDGE_NAME] && window[JS_BRIDGE_NAME].call) {
       // name + object + function
-      var name = args[0]
-      var opt = args[1] || {}
-      var cb = args[2]
+      const name = args[0]
+      let opt = args[1] || {}
+      let cb = args[2]
 
       if (!isString(name)) {
         console.error('apiName error：', name)
@@ -44,7 +44,7 @@ const jsbridge = {
         return
       }
 
-      var _callback = cb
+      const _callback = cb
       cb = (result) => {
         result.errorCode = result.error || 0
         _callback && _callback(result)
@@ -157,7 +157,7 @@ jsbridge.ready(() => {
 
   function next () {
     requestAnimationFrame(() => {
-      var args = apiQueue.shift()
+      const args = apiQueue.shift()
       jsbridge.call.apply(null, args)
       if (apiQueue.length) next()
     })
