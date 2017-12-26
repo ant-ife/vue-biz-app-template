@@ -19,7 +19,7 @@
 
 ## Usage
 
-This is a project template for [apfe-cli](https://github.com/ant-ife/apfe-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
+This is a project template for [apfe-cli](https://github.com/ant-ife/apfe-cli).
 
 ``` bash
 $ npm install -g apfe-cli
