@@ -14,12 +14,12 @@ exports.cssLoaders = function (options) {
   options = options || {}
   const cssOptions = {
     minimize: process.env.NODE_ENV === 'production',
-    sourceMap: options.sourceMap
+    sourceMap: options.sourceMap,
   }
 
   const cssLoader = {
     loader: 'css-loader',
-    options: cssOptions
+    options: cssOptions,
   }
 
   const postcssLoader = {
@@ -32,7 +32,7 @@ exports.cssLoaders = function (options) {
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
-        options: Object.assign({}, loaderOptions, cssOptions)
+        options: Object.assign({}, loaderOptions, cssOptions),
       })
     }
 
@@ -41,7 +41,7 @@ exports.cssLoaders = function (options) {
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
-        fallback: 'vue-style-loader'
+        fallback: 'vue-style-loader',
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
@@ -61,7 +61,7 @@ exports.styleLoaders = function (options) {
     const loader = loaders[extension]
     output.push({
       test: new RegExp('\\.' + extension + '$'),
-      use: loader
+      use: loader,
     })
   }
   return output

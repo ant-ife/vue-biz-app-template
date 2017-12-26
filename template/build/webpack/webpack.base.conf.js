@@ -36,19 +36,19 @@ const matchSVGSpritePath = /assets\/icons/
 
 module.exports = {
   entry: Object.assign({}, entries, {
-    vendor: ['vue', 'vuex', 'vue-router', 'es6-promise', 'fastclick', 'whatwg-fetch']
+    vendor: ['vue', 'vuex', 'vue-router', 'es6-promise', 'fastclick', 'whatwg-fetch'],
   }),
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath(`${pkg.version}/${configs.jsFilename}`),
     chunkFilename: utils.assetsPath(`${pkg.version}/${configs.jsFilename}`),
-    publicPath: configs.assetsPublicPath
+    publicPath: configs.assetsPublicPath,
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: Object.assign({}, alias, {
-      '~rpc': process.env.MOCK === 'true' ? resolve('mock/rpc-mock') : resolve('src/utils/rpc')
-    })
+      '~rpc': process.env.MOCK === 'true' ? resolve('mock/rpc-mock') : resolve('src/utils/rpc'),
+    }),
   },
   module: {
     rules: [
@@ -58,25 +58,25 @@ module.exports = {
         enforce: 'pre',
         include: [resolve('src'), resolve('test')],
         options: {
-          formatter: require('eslint-friendly-formatter')
-        }
+          formatter: require('eslint-friendly-formatter'),
+        },
       },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueLoaderConfig
+        options: vueLoaderConfig,
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('mock')]
+        include: [resolve('src'), resolve('test'), resolve('mock')],
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+          name: utils.assetsPath('img/[name].[hash:7].[ext]'),
         },
         exclude: [
           matchSVGSpritePath,
@@ -86,11 +86,11 @@ module.exports = {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
         options: {
-          symbolId: 'icon-[name]'
+          symbolId: 'icon-[name]',
         },
         include: [
           matchSVGSpritePath,
-        ]
+        ],
       },
       /**
        * image2svg-loader used for temporary bugfix
@@ -111,6 +111,6 @@ module.exports = {
           matchSVGSpritePath,
         ],
       },
-    ]
-  }
+    ],
+  },
 }

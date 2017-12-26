@@ -17,21 +17,21 @@ FastClick.attach(document.body)
 /**
  * Register global filter for all views
  */
-for (let key in filters) {
+for (const key in filters) {
   Vue.filter(key, filters[key])
 }
 
 /**
  * Register global directive for all views
  */
-for (let key in directives) {
+for (const key in directives) {
   Vue.directive(key, directives[key])
 }
 
 /**
  * Register global component for all views
  */
-for (let key in components) {
+for (const key in components) {
   Vue.component(key, components[key])
 }
 

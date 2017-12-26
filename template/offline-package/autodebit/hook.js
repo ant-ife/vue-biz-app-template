@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-var path = require('path');
-var ROOT_PATH = process.cwd();
-var TEMP_PATH = path.join(ROOT_PATH, '_temp');
-var config = require(path.join(TEMP_PATH, 'build/config'));
+const path = require('path')
+const ROOT_PATH = process.cwd()
+const TEMP_PATH = path.join(ROOT_PATH, '_temp')
+const config = require(path.join(TEMP_PATH, 'build/config'))
 
 /**
  * Run before pack, doing the stuff synchronized
@@ -12,26 +12,26 @@ var config = require(path.join(TEMP_PATH, 'build/config'));
  * globby: https://github.com/sindresorhus/globby
  */
 exports.beforePack = function (utils) {
-  var fse = utils.fse;
-  var walletPath = path.join(TEMP_PATH, '/dist');
+  const fse = utils.fse
+  const walletPath = path.join(TEMP_PATH, '/dist')
 
   if (walletPath === path.join(config.build.assetsRoot)) {
-    return;
+    return
   }
 
   try {
-    fse.emptyDirSync(walletPath);
+    fse.emptyDirSync(walletPath)
   } catch (err) {
-    console.log('failed to empty resoure files');
+    console.log('failed to empty resoure files')
   }
 
   try {
-    fse.copySync(path.join(config.build.assetsRoot), walletPath);
-    fse.copySync(config.build.index, path.join(walletPath, '/index.html'));
+    fse.copySync(path.join(config.build.assetsRoot), walletPath)
+    fse.copySync(config.build.index, path.join(walletPath, '/index.html'))
   } catch (err) {
-    console.log('failed to copy resoure files');
+    console.log('failed to copy resoure files')
   }
-};
+}
 
 /**
  * Run after pack, doing the stuff synchronized
@@ -41,6 +41,6 @@ exports.beforePack = function (utils) {
  */
 exports.afterPack = function (utils) {
   ['public', 'view', '_temp'].forEach(function (p) {
-    return utils.fse.removeSync(path.join(ROOT_PATH, p));
-  });
-};
+    return utils.fse.removeSync(path.join(ROOT_PATH, p))
+  })
+}

@@ -20,7 +20,7 @@ const resolve = function (dir) {
 }
 
 const defaultDatahub = new DataHub({
-  port: datahubConfig.port
+  port: datahubConfig.port,
 })
 
 const devWebpackConfig = merge(baseWebpackConfig, {
@@ -72,7 +72,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: '!!ejs-compiled-loader!index.ejs',
       inject: true,
     }),
-  ]
+  ],
 })
 
 module.exports = new Promise((resolve, reject) => {
