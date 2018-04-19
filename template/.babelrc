@@ -15,7 +15,7 @@
         "es2015",
       ],
       "plugins": [
-        "istanbul"
+        "istanbul",
       ],
     }
   },{{/if}}

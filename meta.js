@@ -60,7 +60,8 @@ module.exports = {
       'package.json': Object.assign({}, pkgSettings.test, {
         scripts: {
           test: 'rm -rf screenshots && cross-env NODE_ENV=test macaca run -d ./test/e2e --verbose --reporter macaca-reporter',
-          'dev:test': 'cross-env NODE_ENV=test,MOCK=true webpack-dev-server --inline --progress --config build/webpack/webpack.test.conf.js',
+          serve: 'npm run dev:test &',
+          'dev:test': 'cross-env NODE_ENV=test MOCK=true webpack-dev-server --inline --progress --config build/webpack/webpack.test.conf.js',
           unit: 'cross-env NODE_ENV=test torch --require ./test/unit/helper.js --compile --renderer --http --recursive ./test/unit',
           'unit:debug': 'cross-env NODE_ENV=test torch --require ./test/unit/helper.js --compile --http --interactive --watch --recursive ./test/unit',
           ci: 'npm run lint && npm run unit && npm run serve && npm run test',
