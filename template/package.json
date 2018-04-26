@@ -11,7 +11,7 @@
     "compose": "apfe bizapp compose",
     "lint": "eslint --fix --format ./node_modules/eslint-friendly-formatter --ext .js,.vue src mock && stylelint src/styles/**/*.less src/biz-apps/**/*.less -s less"{{#if flow}},
     "flow": "flow"{{/if}}{{#if test}},
-    "test": "rm -rf screenshots && cross-env NODE_ENV=test macaca run -d ./test/e2e --verbose --reporter macaca-reporter",
+    "test": "rm -rf screenshots && cross-env NODE_ENV=test macaca run -d ./test/e2e",
     "serve": "npm run dev:test &",
     "dev:test": "cross-env NODE_ENV=test MOCK=true webpack-dev-server --inline --progress --config build/webpack/webpack.test.conf.js",
     "unit": "cross-env NODE_ENV=test torch --require ./test/unit/helper.js --compile --renderer --http --recursive ./test/unit",
