@@ -6,7 +6,9 @@
     "method": "ALL",
     "currentScene": "default",
     "proxyContent": "{\"proxies\":[],\"useProxy\":false,\"originKeys\":[],\"currentProxyIndex\":1}",
-    "params": "{\"schemaData\":[{\"field\":\"result\",\"type\":\"object\",\"require\":true,\"description\":\"desc\"}]}",
+    "params": "{}",
+    "reqSchemaContent": "{\"schemaData\":{}}",
+    "resSchemaContent": "{\"schemaData\":{\"type\":\"object\",\"required\":[\"success\"],\"properties\":{\"success\":{\"type\":\"boolean\",\"description\":\"server side success\"},\"data\":{\"type\":\"array\",\"description\":\"data field\",\"required\":[\"age\",\"key\",\"name\",\"address\"],\"properties\":{\"key\":{\"type\":\"string\",\"description\":\"key description\"},\"name\":{\"type\":\"string\",\"description\":\"name description\"},\"age\":{\"type\":\"number\",\"description\":\"age description\"},\"address\":{\"type\":\"string\",\"description\":\"address description\"}}},\"errorMessage\":{\"type\":\"string\",\"description\":\"error message description\"}}}}",
     "scenes": "[{\"name\":\"default\",\"data\":{\"value\":\"foo\"}},{\"name\":\"scene1\",\"data\":{\"value\":\"bar\"}}]",
     "delay": "0"
   }
