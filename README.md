@@ -94,7 +94,7 @@ Let's take a look at ```meta.js```'s ```settings``` key
       "package.json": {
         "dependencies": {
           "es6-promise": "^4.1.0",
-          "fastclick": "^1.0.6",
+          "awesome-fastclick": "^1.0.6",
           "vue": "^2.4.3",
           "vue-router": "^2.7.0",
           "vuex": "^2.4.0",
