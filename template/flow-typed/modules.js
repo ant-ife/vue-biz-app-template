@@ -6,7 +6,7 @@ declare module 'vue-router' {
   declare module.exports: any;
 }
 
-declare module 'fastclick' {
+declare module 'awesome-fastclick' {
   declare module.exports: any;
 }
 

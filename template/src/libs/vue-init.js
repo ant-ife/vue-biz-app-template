@@ -1,5 +1,5 @@
 import 'es6-promise/auto'
-import FastClick from 'fastclick'
+import FastClick from 'awesome-fastclick'
 import Vue from 'vue'
 import * as filters from '~utils/filters'
 import * as directives from '~utils/directives'

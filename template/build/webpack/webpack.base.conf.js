@@ -36,7 +36,7 @@ const matchSVGSpritePath = /assets\/icons/
 
 module.exports = {
   entry: Object.assign({}, entries, {
-    vendor: ['vue', 'vuex', 'vue-router', 'es6-promise', 'fastclick', 'whatwg-fetch'],
+    vendor: ['vue', 'vuex', 'vue-router', 'es6-promise', 'awesome-fastclick', 'whatwg-fetch'],
   }),
   output: {
     path: config.build.assetsRoot,
