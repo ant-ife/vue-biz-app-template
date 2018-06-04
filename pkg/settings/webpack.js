@@ -29,7 +29,7 @@ module.exports = {
     'svg-sprite-loader': '^2.1.0',
     'uglifyjs-webpack-plugin': '^1.1.2',
     'url-loader': '^0.5.8',
-    'vue-loader': '^11.3.4',
+    'vue-loader': '^15.2.2',
     'vue-style-loader': '^3.0.1',
     'vue-template-compiler': '^2.5.8',
     webpack: '^3.6.0',

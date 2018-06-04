@@ -5,6 +5,7 @@ const utils = require('../util/utils')
 const config = require('../config/index')
 const pkg = require('../../package.json')
 const vueLoaderConfig = require('../util/vue-loader.conf')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '../../', dir)
@@ -113,4 +114,7 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new VueLoaderPlugin()
+  ]
 }
