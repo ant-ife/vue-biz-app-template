@@ -28,6 +28,7 @@ const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
+  mode: 'development',
   resolve: {
     alias: {
       jsbridge: resolve('build/support/jsbridge'),
