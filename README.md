@@ -2,11 +2,17 @@
 
 [![build status][travis-image]][travis-url]
 [![node version][node-image]][node-url]
+[![vue version][vue-image]][vue-url]
+[![webpack version][webpack-image]][webpack-url]
 
 [travis-image]: https://img.shields.io/travis/ant-ife/vue-biz-app-template.svg?style=flat-square
 [travis-url]: https://travis-ci.org/ant-ife/vue-biz-app-template
 [node-image]: https://img.shields.io/badge/node.js-%3E=8-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
+[vue-image]: https://img.shields.io/badge/Vue-2-green.svg?style=flat-square
+[vue-url]: https://vuejs.org/
+[webpack-image]: https://img.shields.io/badge/Webpack-4-green.svg?style=flat-square
+[webpack-url]: https://vuejs.org/
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
