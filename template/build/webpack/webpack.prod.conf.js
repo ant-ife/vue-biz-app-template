@@ -28,15 +28,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env,
     }),
-    new UglifyJsPlugin({
-      uglifyOptions: {
-        compress: {
-          warnings: false,
-        },
-      },
-      sourceMap: config.build.productionSourceMap,
-      parallel: true,
-    }),
     // extract css into its own file
     new MiniCssExtractPlugin({
       filename: utils.assetsPath(`${pkg.version}/${config.build.cssFilename}`),
@@ -96,6 +87,17 @@ const webpackConfig = merge(baseWebpackConfig, {
     runtimeChunk: {
       name: 'manifest',
     },
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          compress: {
+            warnings: false,
+          },
+        },
+        sourceMap: config.build.productionSourceMap,
+        parallel: true,
+      }),
+    ],
   },
 })
 
