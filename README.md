@@ -108,7 +108,6 @@ Let's take a look at ```meta.js```'s ```settings``` key
           "ejs-compiled-loader": "^2.2.0",
           "eventsource-polyfill": "^0.9.6",
           "express": "^4.14.1",
-          "extract-text-webpack-plugin": "^2.1.0",
         }
       },
     },

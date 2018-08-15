@@ -1,0 +1,51 @@
+{
+  "type": "response",
+  "data": {
+    "schemaData": {
+      "type": "object",
+      "required": [
+        "success"
+      ],
+      "properties": {
+        "success": {
+          "type": "boolean",
+          "description": "server side success"
+        },
+        "data": {
+          "type": "array",
+          "description": "data field",
+          "required": [
+            "age",
+            "key",
+            "name",
+            "address"
+          ],
+          "properties": {
+            "key": {
+              "type": "string",
+              "description": "key description"
+            },
+            "name": {
+              "type": "string",
+              "description": "name description"
+            },
+            "age": {
+              "type": "number",
+              "description": "age description"
+            },
+            "address": {
+              "type": "string",
+              "description": "address description"
+            }
+          }
+        },
+        "errorMessage": {
+          "type": "string",
+          "description": "error message description"
+        }
+      }
+    }
+  },
+  "interfaceUniqId": "179ae3c8-259f-473b-b400-6b10f3fdb4c7",
+  "uniqId": "f313b3e5-766a-4793-97fc-4094ffc73e67"
+}
