@@ -1,4 +1,4 @@
-import 'es6-promise/auto'
+import 'core-js/fn/promise'
 import FastClick from 'awesome-fastclick'
 import Vue from 'vue'
 import * as filters from '~utils/filters'

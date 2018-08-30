@@ -17,7 +17,3 @@ declare module 'vuex' {
 declare module 'whatwg-fetch' {
   declare module.exports: any;
 }
-
-declare module 'es6-promise/auto' {
-  declare module.exports: any;
-}

@@ -22,7 +22,6 @@ npm run build --report
 # run unit tests
 npm run test
 {{/if}}
-
 ```
 
 For detailed explanation on how things work, checkout the [guide](https://github.com/ant-ife/vue-biz-app-template).

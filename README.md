@@ -99,21 +99,19 @@ Let's take a look at ```meta.js```'s ```settings``` key
       "files": ["build/**/*.js"],
       "package.json": {
         "dependencies": {
-          "es6-promise": "^4.1.0",
           "awesome-fastclick": "^1.0.6",
+          "core-js": "^2.5.7",
           "vue": "^2.4.3",
           "vue-router": "^2.7.0",
           "vuex": "^2.4.0",
           "whatwg-fetch": "^2.0.3"
         },
         "devDependencies": {
-          "chalk": "^1.1.3",
           "connect-history-api-fallback": "^1.3.0",
           "copy-webpack-plugin": "^4.0.1",
           "css-loader": "^0.28.0",
           "ejs-compiled-loader": "^2.2.0",
           "eventsource-polyfill": "^0.9.6",
-          "express": "^4.14.1",
         }
       },
     },

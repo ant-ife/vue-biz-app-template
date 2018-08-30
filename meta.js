@@ -20,11 +20,7 @@ module.exports = {
       type: 'string',
       required: false,
       message: 'Project description',
-      default: 'An ife wallet project',
-    },
-    author: {
-      type: 'string',
-      message: 'Author',
+      default: 'An ife webapp project',
     },
     flow: {
       type: 'confirm',
