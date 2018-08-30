@@ -5,6 +5,6 @@ module.exports = {
     'macaca-wd': '2',
     'module-alias': '^2.0.3',
     'babel-plugin-istanbul': '^4.1.5',
-    torchjs: '^1.0.3',
+    torchjs: '2',
   },
 }
