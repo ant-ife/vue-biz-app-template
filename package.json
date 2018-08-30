@@ -2,33 +2,32 @@
   "name": "vue-biz-app-template",
   "version": "1.0.0",
   "homepage": "https://github.com/ant-ife/vue-biz-app-template",
-  "description": "A biz-app architecture vue tempalte",
+  "description": "webapp boilerplate based on Vue",
   "keywords": [
     "vue",
     "biz-app",
     "template"
-  ],
-  "contributors": [
-    "xiekw2010 <xiekw2010@gmail.com>",
-    "brucejcw <bruce.jcw@gmail.com>",
-    "elrrrrrrr <elrrrrrrr@gmail.com>"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ant-ife/vue-biz-app-template.git"
   },
   "devDependencies": {
-    "eslint": "^4.14.0",
+    "eslint": "^5.4.0",
     "eslint-config-antife": "^1.0.0",
-    "pre-commit": "^1.2.2"
+    "git-contributor": "1",
+    "husky": "^1.0.0-rc.13"
   },
   "scripts": {
     "lint": "eslint --fix meta.js",
-    "ci": "npm run lint"
+    "ci": "npm run lint",
+    "contributor": "git-contributor"
   },
-  "pre-commit": [
-    "lint"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "bugs": {
     "url": "https://github.com/ant-ife/vue-biz-app-template/issues"
   },

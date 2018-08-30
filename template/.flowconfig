@@ -14,7 +14,6 @@ module.file_ext=.vue
 module.file_ext=.js
 module.file_ext=.less
 module.name_mapper='^~assets/\(.*\)$' -> '<PROJECT_ROOT>/src/assets/\1'
-module.name_mapper='^~biz-apps/\(.*\)$' -> '<PROJECT_ROOT>/src/biz-apps/\1'
 module.name_mapper='^~constants/\(.*\)$' -> '<PROJECT_ROOT>/src/constants/\1'
 module.name_mapper='^~components/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
 module.name_mapper='^~entry/\(.*\)$' -> '<PROJECT_ROOT>/src/entry/\1'

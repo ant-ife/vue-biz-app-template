@@ -32,12 +32,6 @@ module.exports = {
       message: 'Using static checker flow',
       default: true,
     },
-    offline: {
-      type: 'confirm',
-      required: true,
-      message: 'Support offline package',
-      default: false,
-    },
     test: {
       type: 'confirm',
       required: true,
@@ -46,15 +40,11 @@ module.exports = {
     },
   },
   filters: {
-    'offline-package/**/*': 'offline',
     'test/**/*': 'test',
     'flow-typed/modules.js': 'flow',
     '.flowconfig': 'flow',
   },
   settings: {
-    'offline-package': {
-      files: ['offline-package/**/*'],
-    },
     test: {
       files: ['test/**/*', 'build/webpack/webpack.test.conf.js', '.torch.compile.opts.js', '.babelrc'],
       'package.json': Object.assign({}, pkgSettings.test, {
@@ -89,10 +79,6 @@ module.exports = {
       }),
     },
   },
-  bizs: {
-    'src/router/modules/topup.js': 'topup',
-    'src/store/modules/topup.js': 'topup',
-  },
   /**
    *
    * @param data metalsmith.metadata()
@@ -110,7 +96,6 @@ module.exports = {
     'src/**/*.vue',
     'src/utils/text.js',
     'src/i18n/*.js',
-    'src/biz-apps/**/i18n/**/*.js',
     'src/utils/gettext.js',
   ],
   completeMessage: 'To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at http://site.alipay.net/ant-ife/vue-aplus-project-template/',
