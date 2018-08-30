@@ -3,7 +3,7 @@ import {
   BASE_URL,
 } from './helper'
 
-describe('autodebit', () => {
+describe('test/e2e/home-page.test.js', () => {
   before(() => {
     return driver
       .initWindow({
@@ -30,22 +30,10 @@ describe('autodebit', () => {
       .quit()
   })
 
-  describe('autodebit', () => {
-    it('autodebit', () => {
+  describe('home page', () => {
+    it('render should be success', () => {
       return driver
-        .getUrl(`${BASE_URL}/autodebit`)
-        .sleep(500)
-    })
-
-    it('autodebit', () => {
-      return driver
-        .getUrl(`${BASE_URL}/autodebit/list`)
-        .sleep(500)
-    })
-
-    it('autodebit', () => {
-      return driver
-        .getUrl(`${BASE_URL}/autodebit/detail`)
+        .getUrl(`${BASE_URL}/`)
         .sleep(500)
     })
   })
