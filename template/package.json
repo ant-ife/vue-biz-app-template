@@ -11,7 +11,7 @@
     "pack": "npm run build && apfe pack",
     "lint:js": "eslint src mock --fix --ext .js,.vue --format ./node_modules/eslint-friendly-formatter",
     "lint:css": "stylelint src/styles/**/*.less -s less",
-    "lint": "npm run lint:js && lint:css"{{#if flow}},
+    "lint": "npm run lint:js && npm run lint:css"{{#if flow}},
     "flow": "flow"{{/if}}{{#if test}},
     "test": "rm -rf screenshots && cross-env NODE_ENV=test macaca run -d ./test/e2e",
     "dev:test": "cross-env NODE_ENV=test MOCK=true webpack-dev-server --inline --progress --config build/webpack/webpack.test.conf.js",
