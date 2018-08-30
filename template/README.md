@@ -17,9 +17,6 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 
-# compose biz-apps
-npm run compose
-
 {{#if test}}
 
 # run unit tests
@@ -28,4 +25,4 @@ npm run test
 
 ```
 
-For detailed explanation on how things work, checkout the [guide](https://github.com/apfe-cli/vue-wallet-template).
+For detailed explanation on how things work, checkout the [guide](https://github.com/ant-ife/vue-biz-app-template).

@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { basePath } from '~constants/index'
 import { HOME, ERROR, NOT_FOUND } from '~constants/pages'
-import autodebitRoutes from '~biz-apps/autodebit/router/index'
 import home from '~views/home'
 import { gettext } from '~utils/gettext'
 import jsbridge from '~utils/jsbridge'
@@ -31,8 +30,7 @@ const router = new Router({
       path: '*',
       component: r => require.ensure([], () => r(require('~views/404')), '404'),
     },
-  ]
-    .concat(autodebitRoutes),
+  ],
 })
 
 router.afterEach(route => {

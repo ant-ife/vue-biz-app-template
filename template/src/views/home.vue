@@ -8,14 +8,6 @@
       <typer :slogans="slogans"/>
     </section>
     <section>
-      <p class="title">{{ 'index.bizapp' | gettext }}</p>
-      <div v-for="name in bizApps" :key="name" >
-        <router-link :to="{path: name}">
-          {{ name }}
-        </router-link>
-      </div>
-    </section>
-    <section>
       <p v-html="msg"></p>
       <p v-html="learn"></p>
     </section>
@@ -34,13 +26,7 @@
       return {
         slogans: [
           'This project scaffold is powered by apfe cli',
-          'Click the biz-apps below',
-          'It will jump to the corresponding path',
-          'Why biz-app cashier is NOT FOUND!',
-          'Because it is not be composed!',
-          'You need run `npm compose` first for running cashier',
         ],
-        bizApps: [ 'autodebit', 'cashier' ],
         date: '',
       }
     },
