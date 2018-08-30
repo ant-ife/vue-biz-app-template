@@ -128,6 +128,18 @@ The ```files``` means the files that needs to be replaced by updating.(The files
 
 The ```package.json``` means the existing project's package.json needs to be extended by this module.
 
+<!-- GITCONTRIBUTOR_START -->
+
+## Contributors
+
+|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars2.githubusercontent.com/u/1814071?v=4" width="100px;"/><br/><sub><b>xiekw2010</b></sub>](https://github.com/xiekw2010)<br/>|[<img src="https://avatars2.githubusercontent.com/u/8085088?v=4" width="100px;"/><br/><sub><b>brucejcw</b></sub>](https://github.com/brucejcw)<br/>|[<img src="https://avatars2.githubusercontent.com/u/4408102?v=4" width="100px;"/><br/><sub><b>YvonneZhang</b></sub>](https://github.com/YvonneZhang)<br/>
+| :---: | :---: | :---: | :---: |
+
+
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Thu Aug 30 2018 20:06:10 GMT+0800`.
+
+<!-- GITCONTRIBUTOR_END -->
+
 ## License
 
 The MIT License (MIT)
