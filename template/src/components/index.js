@@ -6,3 +6,4 @@ import '~utils/load-icons'
 export default {
   icon,
 }
+
