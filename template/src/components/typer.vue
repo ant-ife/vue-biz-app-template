@@ -28,10 +28,6 @@ export default {
     this.play()
   },
 
-  beforeDestroy () {
-    this.stop()
-  },
-
   methods: {
     async _play () {
       const ctx = this
@@ -78,9 +74,6 @@ export default {
       }
     },
 
-    stop () {
-      this.playTimes = -1
-    },
   },
 }
 </script>

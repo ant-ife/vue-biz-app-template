@@ -45,13 +45,6 @@
     },
 
     methods: {
-      go () {
-        jsbridge.pushWindow('about.html')
-      },
-
-      num (x) {
-        return x
-      },
     },
 
     computed: {
