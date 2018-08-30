@@ -24,7 +24,7 @@
 
 This is a project template for [apfe-cli](https://github.com/ant-ife/apfe-cli).
 
-``` bash
+```bash
 $ npm install -g apfe-cli
 $ apfe init my-project
 $ cd my-project
