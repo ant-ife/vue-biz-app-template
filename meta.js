@@ -26,13 +26,13 @@ module.exports = {
       type: 'confirm',
       required: true,
       message: 'Using static checker flow',
-      default: true,
+      default: false,
     },
     test: {
       type: 'confirm',
       required: true,
-      message: 'Unit Test',
-      default: false,
+      message: 'UI Test',
+      default: true,
     },
   },
   filters: {
