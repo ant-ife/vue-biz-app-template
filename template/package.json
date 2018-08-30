@@ -2,7 +2,6 @@
   "name": "{{ name }}",
   "version": "1.0.0",
   "description": "{{ description }}",
-  "author": "{{ author }}",
   "private": true,
   "scripts": {
     "dev": "cross-env MOCK=true npm start",
@@ -13,7 +12,7 @@
     "lint:css": "stylelint src/styles/**/*.less -s less",
     "lint": "npm run lint:js && npm run lint:css"{{#if flow}},
     "flow": "flow"{{/if}}{{#if test}},
-    "test": "rm -rf screenshots && cross-env NODE_ENV=test macaca run -d ./test/e2e",
+    "test": "rm -rf screenshots reports coverage && cross-env NODE_ENV=test macaca run -d ./test/e2e",
     "dev:test": "cross-env NODE_ENV=test MOCK=true webpack-dev-server --inline --progress --config build/webpack/webpack.test.conf.js",
     "serve": "npm run dev:test &",
     "unit": "cross-env NODE_ENV=test torch --require ./test/unit/helper.js --compile --renderer --http --recursive ./test/unit",
