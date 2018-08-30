@@ -26,6 +26,4 @@ function getLang () {
   } else if (/en/i.test(locale)) {
     return 'en_US'
   }
-
-  return ''
 }

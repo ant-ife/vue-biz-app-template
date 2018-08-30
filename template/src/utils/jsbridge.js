@@ -11,18 +11,21 @@ const jsbridge = {
   _apiQueue: [],
 
   on (event, fn) {
+    /* istanbul ignore next */
     event.split(/\s+/g).forEach((eventName) => {
       document.addEventListener(eventName, fn, false)
     })
   },
 
   off (event, fn) {
+    /* istanbul ignore next */
     event.split(/\s+/g).forEach((eventName) => {
       document.removeEventListener(eventName, fn, false)
     })
   },
 
   call () {
+    /* istanbul ignore next */
     const args = [].slice.call(arguments)
 
     if (window[JS_BRIDGE_NAME] && window[JS_BRIDGE_NAME].call) {
@@ -57,6 +60,7 @@ const jsbridge = {
   },
 
   ready (fn) {
+    /* istanbul ignore next */
     if (window[JS_BRIDGE_NAME] && window[JS_BRIDGE_NAME].call) {
       fn && fn()
     } else {
@@ -65,6 +69,7 @@ const jsbridge = {
   },
 
   setTitle (title = '') {
+    /* istanbul ignore next */
     title = title.trim()
 
     if (hasBridge) {
@@ -77,6 +82,7 @@ const jsbridge = {
   },
 
   popWindow (data) {
+    /* istanbul ignore next */
     if (hasBridge) {
       this.call('popWindow', data)
     } else {
@@ -85,6 +91,7 @@ const jsbridge = {
   },
 
   pushWindow (opt = '') {
+    /* istanbul ignore next */
     if (opt) {
       if (isString(opt)) {
         opt = { url: opt }
@@ -99,10 +106,12 @@ const jsbridge = {
   },
 
   close () {
+    /* istanbul ignore next */
     this.call('exitSession')
   },
 
   openInBrowser (opt, fn) {
+    /* istanbul ignore next */
     if (isString(opt)) {
       opt = { url: opt }
     }
@@ -111,30 +120,37 @@ const jsbridge = {
   },
 
   setCloseButton (opt) {
+    /* istanbul ignore next */
     this.call('setCloseButton', opt)
   },
 
   setBackButton (opt) {
+    /* istanbul ignore next */
     this.call('setBackButton', opt)
   },
 
   setOptionMenu (opt) {
+    /* istanbul ignore next */
     this.call('setOptionMenu', opt)
   },
 
   showOptionMenu () {
+    /* istanbul ignore next */
     this.call('showOptionMenu')
   },
 
   hideOptionMenu () {
+    /* istanbul ignore next */
     this.call('hideOptionMenu')
   },
 
   postNotification (opt, fn) {
+    /* istanbul ignore next */
     this.call('postNotification', opt, fn)
   },
 
   rpc (operationType = '', requestData = {}, fn) {
+    /* istanbul ignore next */
     const option = { operationType }
 
     if (isFunction(requestData)) {
@@ -153,6 +169,7 @@ const jsbridge = {
 }
 
 jsbridge.ready(() => {
+  /* istanbul ignore next */
   const apiQueue = jsbridge._apiQueue || []
 
   function next () {

@@ -4,8 +4,9 @@
       <icon name="logo"/>
     </header>
     <section>
-      <p class="title">{{ 'index.title' | gettext }}</p>
+      <p class="title">{{ 'index.title ' | gettext }}</p>
       <typer :slogans="slogans"/>
+      {{ 'not.found' | gettext }}
     </section>
     <section>
       <p v-html="msg"></p>
@@ -35,7 +36,7 @@
       typer,
     },
 
-    async created () {
+    async mounted () {
       jsbridge.rpc(API_INIT, { timestamp: new Date() }, (res) => {
         console.log(JSON.stringify(res, null, 2))
         this.date = res.data

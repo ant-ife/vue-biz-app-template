@@ -17,6 +17,7 @@ FastClick.attach(document.body)
 /**
  * Register global filter for all views
  */
+/* istanbul ignore next */
 for (const key in filters) {
   Vue.filter(key, filters[key])
 }
@@ -24,6 +25,7 @@ for (const key in filters) {
 /**
  * Register global directive for all views
  */
+/* istanbul ignore next */
 for (const key in directives) {
   Vue.directive(key, directives[key])
 }

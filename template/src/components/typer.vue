@@ -56,7 +56,7 @@ export default {
           },
           (t, n) => t.slice(0, n)
         )
-        await sleep(1500)
+        await sleep(500)
         await playText(
           text,
           n => {
