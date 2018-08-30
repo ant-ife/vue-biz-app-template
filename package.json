@@ -2,7 +2,7 @@
   "name": "vue-biz-app-template",
   "version": "1.0.0",
   "homepage": "https://github.com/ant-ife/vue-biz-app-template",
-  "description": "A biz-app architecture vue tempalte",
+  "description": "webapp boilerplate based on Vue",
   "keywords": [
     "vue",
     "biz-app",
