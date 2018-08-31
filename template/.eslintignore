@@ -2,4 +2,6 @@ build/*.js
 config/*.js
 .git/
 dist/
+.temp/
+_packages/
 **/*.min.js

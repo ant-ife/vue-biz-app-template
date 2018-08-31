@@ -21,6 +21,7 @@
   },
   "subapp": {
     "id": "hello-world",
+    "filename": "[id]_[version]_[random]",
     "includes": [
       "./dist/**/*"
     ],
